@@ -1,0 +1,29 @@
+---
+const { readMePathProp } = Astro.props;
+const readMePath = await import(readMePathProp)
+---
+
+<div
+	class="bg-gradient-to-r from-slate-100 to-slate-200 dark:from-slate-900 dark:to-slate-800 text-slate-800 dark:text-slate-100 mb-20 p-4 lg:p-16 shadow-xl shadow-slate-200 dark:shadow-slate-900"
+>
+	<article class="flex justify-center pt-8 pb-32">
+		<div class="w-full readme format dark:format-invert lg:format-lg">
+			<h1 class="text-center">
+				{readMePath.getHeadings()[0].text}
+			</h1>
+			<readMePath.Content />
+		</div>
+	</article>
+</div>
+
+<style>
+	/* Override in Markdown H1 title */
+	.readme :global(h1:nth-of-type(2)) {
+		display: none;
+	}
+
+	.svg-inline :global(svg) {
+		height: 100%;
+		width: 100%;
+	}
+</style>
