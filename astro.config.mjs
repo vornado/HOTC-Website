@@ -9,6 +9,7 @@ export default defineConfig({
 	site: process.env.CI
 		? 'https://vornado.github.io'
 		: `http://localhost:${DEV_PORT}`,
+	base: './',
 	integrations: [
 		tailwind(),
 	],
