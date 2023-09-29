@@ -9,7 +9,7 @@ export default defineConfig({
 	site: process.env.CI
 		? 'https://vornado.github.io'
 		: `http://localhost:${DEV_PORT}`,
-	base: process.env.CI ? '/hotc' : undefined,
+	base: process.env.CI,
 	integrations: [
 		tailwind(),
 	],
