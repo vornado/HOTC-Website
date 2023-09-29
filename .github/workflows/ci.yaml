@@ -1,0 +1,46 @@
+name: HOTC — Continuous Integration
+
+on:
+  push:
+    branches: ['next']
+
+  workflow_dispatch:
+
+env:
+  CI: true
+  FORCE_COLOR: true
+
+concurrency: ${{ github.workflow }}-${{ github.ref }}
+
+jobs:
+  ci:
+    name: Deploy demo
+    runs-on: ubuntu-20.04
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v3
+        with:
+          ref: ${{ github.ref }}
+
+      # ————————————————————————————————————————————————————————————————————————
+
+      - name: Setup Node.js 18
+        uses: actions/setup-node@v3
+        with:
+          node-version: 18
+
+      # ————————————————————————————————————————————————————————————————————————
+
+      - name: Setup PNPM 7
+        uses: pnpm/action-setup@v2.2.2
+        with:
+          version: 7.18.1
+          run_install: false
+
+      - name: Install Node dependencies
+        # `production` to exclude dev. dependencies
+        run: NODE_ENV=production pnpm install
+
+      - name: Build demo website (dist)
+        run: 'NODE_ENV=production pnpm run build'

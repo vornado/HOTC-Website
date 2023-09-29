@@ -4,7 +4,6 @@ module.exports = {
 	content: [
 		//
 		'./src/**/*.{astro,html,js,jsx,md,mdx,svelte,ts,tsx,vue}',
-		'./node_modules/flowbite/**/*.js',
 	],
 
 	darkMode: 'class',
@@ -106,11 +105,6 @@ module.exports = {
 		// For Astro one
 		'grid',
 	],
-
 	plugins: [
-		//
-		require('flowbite/plugin'),
-		require('flowbite-typography'),
-		require('tailwind-scrollbar')({ nocompatible: true }),
 	],
 };
