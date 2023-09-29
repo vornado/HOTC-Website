@@ -2,7 +2,7 @@ import { defineConfig } from 'astro/config';
 
 import tailwind from '@astrojs/tailwind';
 
-const DEV_PORT = 2121;
+const DEV_PORT = 4321;
 
 // https://astro.build/config
 export default defineConfig({
