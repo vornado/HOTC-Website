@@ -1,9 +1,6 @@
 ---
 import pkg from '../../package.json' assert { type: 'json' };
-
 import { SITE_TITLE } from './constants.js';
-
-const { class: clazz } = Astro.props;
 ---
 
 <!DOCTYPE html>
@@ -32,17 +29,10 @@ const { class: clazz } = Astro.props;
 	</head>
 	<body
 		class:list={[
-			//
-			clazz,
-			'bg-gray-50 dark:bg-gray-800',
-			'scrollbar scrollbar-w-3 scrollbar-thumb-rounded-[0.25rem]',
-			'scrollbar-track-slate-200  scrollbar-thumb-gray-400',
-			'dark:scrollbar-track-gray-900 dark:scrollbar-thumb-gray-700',
 		]}
 	>
 		<slot />
 	</body>
 </html>
 <style is:global>
-	@import url('https://fonts.cdnfonts.com/css/inter');
 </style>
