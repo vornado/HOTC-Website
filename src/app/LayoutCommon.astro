@@ -12,8 +12,8 @@ import { SITE_TITLE } from './constants.js';
 
 		<meta name="generator" content={Astro.generator} />
 		<meta name="description" content={pkg.description} />
-		<meta name="" content={pkg.description} />
-		<link rel="icon" type="image/x-icon" href={'/favicon.ico'} />
+		<meta name="Dog Training" content={pkg.description} />
+		<link rel="icon" type="image/x-icon" href={'../favicon.ico'} />
 
 		<script is:inline>
 			if (
@@ -27,10 +27,7 @@ import { SITE_TITLE } from './constants.js';
 			}
 		</script>
 	</head>
-	<body
-		class:list={[
-		]}
-	>
+	<body>
 		<slot />
 	</body>
 </html>
