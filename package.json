@@ -1,7 +1,7 @@
 {
 	"name": "hotc",
 	"description": "The Huntsville Obedience Training Club is an AKC licensed dog club providing classes in many aspects of dog training.",
-	"version": "1.0.0",
+	"version": "0.0.1",
 	"private": "true",
 	"type": "module",
 	"scripts": {
@@ -10,10 +10,10 @@
 		"build": "astro build",
 		"preview": "astro preview",
 		"astro": "astro"
-	  },
-	  "dependencies": {
-		"@astrojs/tailwind": "^5.0.0",
-		"astro": "^3.0.13",
+	},
+	"dependencies": {
+		"@astrojs/tailwind": "^5.0.1",
+		"astro": "^3.2.3",
 		"tailwindcss": "^3.3.3"
-	  }
+	}
 }
