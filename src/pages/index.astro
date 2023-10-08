@@ -2,38 +2,73 @@
 import LayoutSidebar from "../app/LayoutSidebar.astro";
 ---
 
-<script>
-
-</script>
-
-
 <LayoutSidebar>
 	<div class="flex flex-col">
-		<div
-			class="justify-center items-center mx-auto h-screen xl"
-		>
+		<div class="justify-center items-center">
 			<h1 class="mb-3 text-5xl font-bold text-center dark:text-white">
 				Welcome to HOTC !!
 			</h1>
-			<h2 class="mb-2 text-xl text-center dark:text-white">HOTC Scent Work Trails</h2>
-			<p class="dark:text-white">October 7 & 8, 2023</p>
-			<h2 class="mb-2 text-xl text-center dark:text-white">HOTC Agility Trails</h2>
-			<p class="dark:text-white">October 27, 28, & 29 2023</p>
-			<p class="dark:text-white">Close October 11</p>
-			<p class="dark:text-white">Premium Updated 8/15</p>
-			<h2 class="mb-2 text-xl text-center dark:text-white">HOTC FAST CAT Trails</h2>
-			<p class="dark:text-white">November 3, 4, & 5</p>
+			<div>
+				<h2 class="mb-2 text-2xl text-center dark:text-white">
+					HOTC Scent Work Trails
+				</h2>
+				<p class="mb-3 text-right dark:text-white">
+					October 7 & 8, 2023
+				</p>
+			</div>
+			<div>
+				<h2 class="mb-2 text-2xl text-center dark:text-white">
+					HOTC Agility Trails
+				</h2>
+				<p class="text-right dark:text-white">
+					October 27, 28, & 29 2023
+				</p>
+				<p class="text-right dark:text-white">Close October 11</p>
+				<p class="mb-3 text-right dark:text-white">
+					Premium Updated 8/15
+				</p>
+			</div>
+			<div>
+				<h2 class="mb-2 text-2xl text-center dark:text-white">
+					HOTC FAST CAT Trails
+				</h2>
+				<p class="mb-3 text-right dark:text-white">
+					November 3, 4, & 5
+				</p>
+			</div>
 		</div>
-		<div
-			class="justify-right items-right mx-auto h-screen xl"
-		>
-			<p class="dark:text-white">
-				The Huntsville Obedience Training Club is an AKC licensed dog
-				club providing classes in many aspects of dog training.
-			</p>
-			<p class="dark:text-white">
 
-			</p>
+		<div class="flex">
+			<!--Left Side -->
+			<div>
+				<img src="./" alt="HOTC Building Sign" />
+			</div>
+			<!--Right Side -->
+			<div>
+				<div>
+					<p class="dark:text-white">
+						The Huntsville Obedience Training Club is an AKC
+						licensed dog club providing classes in many aspects of
+						dog training.
+					</p>
+					<p class="text-center dark:text-white">
+						Click here for the Obedience Class Schedule including
+						Puppy and Manners 101 classes
+					</p>
+					<p class="text-center dark:text-white">
+						131 Export Circle
+					</p>
+					<p class="text-center dark:text-white">
+						Huntsville, Alabama
+					</p>
+					<p class="text-center dark:text-white">
+						MAILING ADDRESS P.O. Box 11834, Huntsville AL 35814
+					</p>
+					<p class="text-center text-red-500">
+						256-852-4377
+					</p>
+				</div>
+			</div>
 		</div>
 	</div>
 </LayoutSidebar>
